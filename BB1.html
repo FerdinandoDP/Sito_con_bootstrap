@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <!--titolo-->
+    <!--creo un container fluid che contenga una row-->
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="p-3 mb-2 bg-secondary text-white"><!--riga con un background di un det. colore-->
+                <h1 class="text-center">B&B</h1>
+            </div>
+        </div>
+    </div>
+    
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Menù</a>
+        <!--icona menù che compare solo quando si passa in mobile-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--creazione menù in caso mobile-->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Le nostre sale:
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="https://img.huffingtonpost.com/asset/5f34e74120000045040bd892.jpeg?ops=scalefit_630_noupscale" target="_blank" alt="Collegamento">Discoteca</a>
+                        <a class="dropdown-item" href="https://www.milanosud.it/wp-content/uploads/2020/05/coronavirus-cameriera-ridotta.jpg">Sala cerimonie</a>
+                    </div>
+                </li>
+                 <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        I nostri eventi:
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item">Balli latino-americani</a>
+                        <a class="dropdown-item">Corso sommelier</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!--section e aside-->
+    <!--creo un container che contenga una row con due col allineate-->
+    <div class="container-fluid">
+        <div class="row align-items-start"> <!--in tal modo ho delle colonne allineate in alto-->
+            <div class="col-8">
+                
+                <!--section-->
+                <!--section presentazione-->
+                <div style="border-bottom: 2px solid lightgray; border-top: 2px solid lightgray;">
+                    <section>
+                        <h2 class="text-center">Ci Presentiamo!</h2>
+                        <p>Il nostro B&B è il migliore, abbiamo tantissime stanze disponibili, non ti resta che contattarci!</p>
+                    </section>
+                </div>
+                <!--section carosello-->
+                <div style="border-bottom: 2px solid lightgray; border-top: 2px solid lightgray;">
+                        <h2 class="text-center">La nostra Location:</h2>
+                        <!--carosello-->
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100 h-75" src="immagine_1.jpg" alt="First image">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 h-75" src="immagine_2.jpg" alt="Second image">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100 h-75" src="immagine_3.jpg" alt="Third image">
+                            </div>
+                        </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!--aside-->
+            <div class="col" style="background-color:lightgray;height: 560px;"><!--inserisco il background color e la lunghezza,la larghezza è in automatico-->
+                <aside>
+                     <div class="prova">
+                    <div class="p-3 mb-2 bg-secondary text-white">
+                        <h2 class="text-center">
+                            Parlano di noi:
+                        </h2>
+                    </div>
+                    <!--creo una lista-->
+                    <ul class="list-group">
+                        <li class="list-group-item"><a href="https://tg24.sky.it/cronaca/2020/09/24/coronavirus-ultime-notizie-oggi-24-settembre" target="_blank" alt="Collegamento">TG24</a></li>
+                        <li class="list-group-item"><a href="https://www.internazionale.it/notizie/2020/09/24/francia-zone-rosse-notizie-virus" target="_blank" alt="Collegamento">Internazionale</a></li>
+                        <li class="list-group-item"><a href="https://www.gazzetta.it/Calciomercato/23-09-2020/notizie-calciomercato-live-oggi-giovedi-24-settembre-3802220144504.shtml" target="_blank" alt="Collegamento">Corriere</a></li>    
+                    </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="p-3 mb-2 bg-secondary text-white">
+                <p>Creato da Ferdinando</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+    
