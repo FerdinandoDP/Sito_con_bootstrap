@@ -60,7 +60,7 @@
                         <p>Il nostro B&B è il migliore, abbiamo tantissime stanze disponibili, non ti resta che contattarci!</p>
                     </section>
                 </div>
-                <!--section carosello-->
+                <!-- carosello-->
                 <div style="border-bottom: 2px solid lightgray; border-top: 2px solid lightgray;">
                         <h2 class="text-center">La nostra Location:</h2>
                         <!--carosello-->
@@ -76,11 +76,11 @@
                                 <img class="d-block w-100 h-75" src="immagine_3.jpg" alt="Third image">
                             </div>
                         </div>
-                    <a class="carousel-control-prev" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="carousel-control-next" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
@@ -101,7 +101,10 @@
                     <ul class="list-group">
                         <li class="list-group-item"><a href="https://tg24.sky.it/cronaca/2020/09/24/coronavirus-ultime-notizie-oggi-24-settembre" target="_blank" alt="Collegamento">TG24</a></li>
                         <li class="list-group-item"><a href="https://www.internazionale.it/notizie/2020/09/24/francia-zone-rosse-notizie-virus" target="_blank" alt="Collegamento">Internazionale</a></li>
-                        <li class="list-group-item"><a href="https://www.gazzetta.it/Calciomercato/23-09-2020/notizie-calciomercato-live-oggi-giovedi-24-settembre-3802220144504.shtml" target="_blank" alt="Collegamento">Corriere</a></li>    
+                        <li class="list-group-item"><a href="https://www.gazzetta.it/Calciomercato/23-09-2020/notizie-calciomercato-live-oggi-giovedi-24-settembre-3802220144504.shtml" target="_blank" alt="Collegamento">Corriere</a></li>
+                        <li class="list-group-item" id="risultato">
+                        
+                        </li>
                     </ul>
                     </div>
                 </aside>
@@ -109,16 +112,44 @@
         </div>
         
     </div>
-    <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="p-3 mb-2 bg-secondary text-white">
-                <p>Creato da Ferdinando</p>
-            </div>
+    <div class="container-fluid" id="comment_section">
+        <div class="p-3 mb-2 bg-secondary text-white">
+         <div class="row align-items-start">
+                <div class="col-2">
+                   Scrivi un commento:
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" aria-label="comment_bar" id="text_area">   
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-primary">
+                    Invia
+                    </button>
+                </div>
+        </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+       var numero_sezioni = $('section').length 
+       $('#risultato').text(numero_sezioni)})
+       $(document).ready(function(){
+          $('.btn.btn-primary').click(function(){
+              console.log("a");
+              var comment=$('#text_area').val();
+              console.log(comment);
+              $('#text_area').val(""); 
+              $('<div class="alert alert-secondary">'+comment+'</div>').appendTo('#comment_section');
+          }) 
+       })
+       
+    </script>
 </body>
 </html>
     
